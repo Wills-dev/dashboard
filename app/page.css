@@ -1,6 +1,6 @@
 .grid-container {
   display: grid;
-  grid-template-columns: 70px 1fr;
+  grid-template-columns: 80px 1fr;
   grid-template-rows: 80px 1fr;
   grid-template-areas:
     "sidenav header"
@@ -12,10 +12,64 @@
 .header {
   grid-area: header;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 55px;
+  flex-direction: column;
+  justify-content: center;
   background: #ffffff;
+  width: 100%;
+}
+
+.header .header-title-ctn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 20px;
+  border-bottom: 1px solid rgba(241, 243, 249, 1);
+}
+
+.header-title-ctn .header-title h2 {
+  color: rgba(69, 70, 78, 1);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  font-family: "Poppins", sans-serif;
+}
+
+.header-title-ctn .header-profile-ctn {
+  display: flex;
+  align-items: center;
+}
+
+.header-profile-ctn .profile-name {
+  margin-right: 20px;
+  background-color: rgba(254, 245, 234, 1);
+  padding: 5px 12px;
+  border-radius: 8px;
+  font-weight: 400;
+  display: none;
+}
+
+.header-profile-ctn .profile-name p {
+  color: rgba(28, 29, 34, 1);
+  font-size: 14px;
+  line-height: 16.9px;
+  font-family: "Inter", sans-serif;
+}
+
+.profile-name p svg {
+  margin-left: 10px;
+}
+
+.header-profile-ctn .profile-icon {
+  margin-right: 0;
+}
+
+.header-profile-ctn .profile-pic {
+  display: none;
+}
+
+.header .header-icon-ctn {
+  padding: 0 20px;
 }
 
 .main {
@@ -26,9 +80,71 @@
   background-color: #eef0fa;
 }
 
+/* .main .row > div {
+  padding: 7px;
+} */
+
+.over-card {
+  background-color: rgba(255, 255, 255, 1);
+  padding: 11px 15px;
+  border-radius: 12px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.upper-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.upper-card .icon h5 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  font-family: "Inter", sans-serif;
+}
+
+.upper-card .week p {
+  color: rgba(190, 192, 202, 1);
+  font-size: 12px;
+  font-family: "Inter", sans-serif;
+  line-height: 14.5px;
+}
+
+.week p svg {
+  margin-left: 6px;
+}
+
+.lower-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lower-card p {
+  color: rgba(139, 141, 151, 1);
+  font-size: 13px;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 10px;
+}
+
+.lower-card h5 {
+  color: rgba(69, 70, 78, 1);
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.lower-card h5 span {
+  font-size: 10px;
+  color: rgba(81, 156, 102, 1);
+}
+
 @media only screen and (min-width: 46.875em) {
   .grid-container {
-    grid-template-columns: 270px 1fr;
+    grid-template-columns: 280px 1fr;
     grid-template-areas:
       "sidenav header"
       "sidenav main"
@@ -47,9 +163,21 @@
     margin-right: 40px;
   }
 
+  .header-profile-ctn .profile-name {
+    display: block;
+  }
+
+  .header-profile-ctn .profile-icon {
+    margin-right: 20px;
+  }
+
+  .header-profile-ctn .profile-pic {
+    display: block;
+  }
+
   .main {
     grid-area: main;
-    padding: 25.25px 55px;
+    padding: 15px 20px;
     border-top: 1px solid #eae7e7;
   }
 

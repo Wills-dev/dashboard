@@ -1,6 +1,20 @@
+@font-face {
+  font-family: "Nunito Sans", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-family: "Inter", sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Inter&family=Nunito+Sans&family=Open+Sans&family=Poppins&family=Roboto&display=swap");
+}
+
 html,
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+p,
+h2 {
+  margin: 0;
 }
